@@ -2,10 +2,19 @@
     background-color: black;
     color: white;
     padding: 3rem 0;
+
+    @include query(cp) {
+        padding: 5rem 0;
+    }
     .logo {
         transform: scale(0.8);
         position: relative;
         left: -20px;
+
+        @include query(cp) {
+            left: 0;
+            transform: scale(1);
+        }
     }
     &__top,
     &__bottom {
@@ -16,9 +25,36 @@
         font-family: "Alata", sans-serif;
     }
 
+    &__top {
+        @include query(cp) {
+            width: 100%;
+            display: grid;
+            justify-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+    }
+
+    &__list {
+        display: none;
+        @include query(cp) {
+            display: grid;
+            gap: 1.5rem;
+            text-align: center;
+
+            li.nav__item {
+                margin: 0;
+            }
+        }
+    }
+
     &__social {
         display: flex;
         align-items: center;
+
+        @include query(cp) {
+            margin: 1rem 0;
+        }
 
         li {
             margin-left: 1rem;
@@ -54,5 +90,10 @@
 
     &__copyright {
         color: var(--darkGray);
+
+        @include query(cp) {
+            text-align: center;
+            margin: auto;
+        }
     }
 }

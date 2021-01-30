@@ -3,10 +3,18 @@
     &__container {
         position: relative;
         display: flex;
+
+        @include query(tabp) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__img {
         width: 70%;
+        @include query(tabp) {
+            width: 90%;
+        }
     }
 
     &__hero {
@@ -17,6 +25,12 @@
         padding: 3rem;
         padding-bottom: 0;
         width: 50%;
+
+        @include query(tabp) {
+            position: relative;
+            width: 90%;
+            text-align: center;
+        }
     }
 
     &__title {

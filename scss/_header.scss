@@ -6,9 +6,18 @@
     background-position: center;
     padding-top: 2rem;
 
-    &__container {
-        width: 70%;
-        margin: 0 auto;
+    @include query(tabp) {
+        min-height: 100vh;
+        background-image: linear-gradient(
+                rgba(0, 0, 0, 0.336),
+                rgba(0, 0, 0, 0.5)
+            ),
+            url("../images/mobile/image-hero.jpg");
+    }
+
+    @include query(cp) {
+        display: flex;
+        justify-content: center;
     }
     &__hero {
         color: white;
@@ -21,6 +30,16 @@
         padding: 1rem;
         margin-top: 6rem;
         line-height: 1;
+        @include query(tabp) {
+            width: 80%;
+            font-size: 3.5rem;
+        }
+
+        @include query(cp) {
+            width: 100%;
+            margin-top: 40%;
+            padding: 2rem;
+        }
     }
 }
 
@@ -31,6 +50,13 @@
     font-family: "Josefin Sans", sans-serif;
     justify-content: space-between;
     align-items: center;
+
+    &__menu {
+        display: none;
+        @include query(tabp) {
+            display: block;
+        }
+    }
 
     &__item {
         margin-left: 1rem;
@@ -60,5 +86,9 @@
         color: white;
         display: flex;
         align-items: center;
+
+        @include query(tabp) {
+            display: none;
+        }
     }
 }

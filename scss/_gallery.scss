@@ -6,6 +6,10 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: 2rem;
+
+        @include query(cp) {
+            justify-content: center;
+        }
     }
 
     &__title {
@@ -25,12 +29,30 @@
             background-color: black;
             color: white;
         }
+
+        @include query(cp) {
+            display: none;
+        }
+    }
+
+    .two {
+        display: none;
+        margin: 3rem auto 0 auto;
+        padding: 0.5rem 3rem;
+        letter-spacing: 1.2;
+        @include query(cp) {
+            display: block;
+        }
     }
 
     &__body {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
         gap: 1rem;
+
+        @include query(cp) {
+            grid-template-columns: 1fr;
+        }
     }
 }
 
@@ -41,6 +63,11 @@
     line-height: 1;
     background-position: center;
     background-size: cover;
+
+    @include query(cp) {
+        height: 12rem;
+    }
+
     &__title {
         font-size: 1.8rem;
         font-family: "Josefin Sans", sans-serif;
@@ -66,6 +93,14 @@
                 rgba(0, 0, 0, 0.3)
             ),
             url("../images/desktop/image-deep-earth.jpg");
+
+        @include query(cp) {
+            background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.3),
+                    rgba(0, 0, 0, 0.3)
+                ),
+                url("../images/mobile/image-deep-earth.jpg");
+        }
     }
     &:nth-child(2) {
         background-image: linear-gradient(
@@ -73,6 +108,14 @@
                 rgba(0, 0, 0, 0.3)
             ),
             url("../images/desktop/image-night-arcade.jpg");
+
+        @include query(cp) {
+            background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.3),
+                    rgba(0, 0, 0, 0.3)
+                ),
+                url("../images/mobile/image-night-arcade.jpg");
+        }
     }
     &:nth-child(3) {
         background-image: linear-gradient(
@@ -80,6 +123,14 @@
                 rgba(0, 0, 0, 0.3)
             ),
             url("../images/desktop/image-soccer-team.jpg");
+
+        @include query(cp) {
+            background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.3),
+                    rgba(0, 0, 0, 0.3)
+                ),
+                url("../images/mobile/image-soccer-team.jpg");
+        }
     }
     &:nth-child(4) {
         background-image: linear-gradient(
@@ -87,6 +138,14 @@
                 rgba(0, 0, 0, 0.3)
             ),
             url("../images/desktop/image-grid.jpg");
+
+        @include query(cp) {
+            background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.3),
+                    rgba(0, 0, 0, 0.3)
+                ),
+                url("../images/mobile/image-grid.jpg");
+        }
     }
     &:nth-child(5) {
         background-image: linear-gradient(
@@ -94,6 +153,14 @@
                 rgba(0, 0, 0, 0.3)
             ),
             url("../images/desktop/image-from-above.jpg");
+
+        @include query(cp) {
+            background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.3),
+                    rgba(0, 0, 0, 0.3)
+                ),
+                url("../images/mobile/image-from-above.jpg");
+        }
     }
     &:nth-child(6) {
         background-image: linear-gradient(
@@ -101,6 +168,14 @@
                 rgba(0, 0, 0, 0.3)
             ),
             url("../images/desktop/image-pocket-borealis.jpg");
+
+        @include query(cp) {
+            background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.3),
+                    rgba(0, 0, 0, 0.3)
+                ),
+                url("../images/mobile/image-pocket-borealis.jpg");
+        }
     }
     &:nth-child(7) {
         background-image: linear-gradient(
@@ -108,6 +183,14 @@
                 rgba(0, 0, 0, 0.3)
             ),
             url("../images/desktop/image-curiosity.jpg");
+
+        @include query(cp) {
+            background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.3),
+                    rgba(0, 0, 0, 0.3)
+                ),
+                url("../images/mobile/image-curiosity.jpg");
+        }
     }
     &:nth-child(8) {
         background-image: linear-gradient(
@@ -115,5 +198,13 @@
                 rgba(0, 0, 0, 0.3)
             ),
             url("../images/desktop/image-fisheye.jpg");
+
+        @include query(cp) {
+            background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.3),
+                    rgba(0, 0, 0, 0.3)
+                ),
+                url("../images/mobile/image-fisheye.jpg");
+        }
     }
 }

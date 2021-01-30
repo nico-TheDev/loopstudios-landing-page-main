@@ -18,6 +18,12 @@ html {
   box-sizing: border-box;
 }
 
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 80%;
+  }
+}
+
 a,
 button {
   text-decoration: none;
@@ -55,6 +61,12 @@ li {
   margin: 0 auto;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .container {
+    width: 90%;
+  }
+}
+
 .header {
   min-height: 80vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.336), rgba(0, 0, 0, 0.5)), url("../images/desktop/image-hero.jpg");
@@ -63,9 +75,18 @@ li {
   padding-top: 2rem;
 }
 
-.header__container {
-  width: 70%;
-  margin: 0 auto;
+@media only screen and (max-width: 56.25em) {
+  .header {
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.336), rgba(0, 0, 0, 0.5)), url("../images/mobile/image-hero.jpg");
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .header {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .header__hero {
@@ -81,6 +102,21 @@ li {
   line-height: 1;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .header__hero {
+    width: 80%;
+    font-size: 3.5rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .header__hero {
+    width: 100%;
+    margin-top: 40%;
+    padding: 2rem;
+  }
+}
+
 .nav {
   margin: auto;
   width: 100%;
@@ -88,6 +124,16 @@ li {
   font-family: "Josefin Sans", sans-serif;
   justify-content: space-between;
   align-items: center;
+}
+
+.nav__menu {
+  display: none;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .nav__menu {
+    display: block;
+  }
 }
 
 .nav__item {
@@ -122,6 +168,12 @@ li {
   align-items: center;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .nav__list {
+    display: none;
+  }
+}
+
 .one {
   padding: 6rem 0;
 }
@@ -131,8 +183,21 @@ li {
   display: flex;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .one__container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .one__img {
   width: 70%;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .one__img {
+    width: 90%;
+  }
 }
 
 .one__hero {
@@ -143,6 +208,14 @@ li {
   padding: 3rem;
   padding-bottom: 0;
   width: 50%;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .one__hero {
+    position: relative;
+    width: 90%;
+    text-align: center;
+  }
 }
 
 .one__title {
@@ -170,6 +243,12 @@ li {
   margin-bottom: 2rem;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .gallery__head {
+    justify-content: center;
+  }
+}
+
 .gallery__title {
   font-size: 2rem;
   font-family: "Josefin Sans", sans-serif;
@@ -189,10 +268,35 @@ li {
   color: white;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .gallery__btn {
+    display: none;
+  }
+}
+
+.gallery .two {
+  display: none;
+  margin: 3rem auto 0 auto;
+  padding: 0.5rem 3rem;
+  letter-spacing: 1.2;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .gallery .two {
+    display: block;
+  }
+}
+
 .gallery__body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
   gap: 1rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .gallery__body {
+    grid-template-columns: 1fr;
+  }
 }
 
 .item {
@@ -202,6 +306,12 @@ li {
   line-height: 1;
   background-position: center;
   background-size: cover;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .item {
+    height: 12rem;
+  }
 }
 
 .item__title {
@@ -227,32 +337,80 @@ li {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/desktop/image-deep-earth.jpg");
 }
 
+@media only screen and (max-width: 37.5em) {
+  .item:nth-child(1) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/mobile/image-deep-earth.jpg");
+  }
+}
+
 .item:nth-child(2) {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/desktop/image-night-arcade.jpg");
+}
+
+@media only screen and (max-width: 37.5em) {
+  .item:nth-child(2) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/mobile/image-night-arcade.jpg");
+  }
 }
 
 .item:nth-child(3) {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/desktop/image-soccer-team.jpg");
 }
 
+@media only screen and (max-width: 37.5em) {
+  .item:nth-child(3) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/mobile/image-soccer-team.jpg");
+  }
+}
+
 .item:nth-child(4) {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/desktop/image-grid.jpg");
+}
+
+@media only screen and (max-width: 37.5em) {
+  .item:nth-child(4) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/mobile/image-grid.jpg");
+  }
 }
 
 .item:nth-child(5) {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/desktop/image-from-above.jpg");
 }
 
+@media only screen and (max-width: 37.5em) {
+  .item:nth-child(5) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/mobile/image-from-above.jpg");
+  }
+}
+
 .item:nth-child(6) {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/desktop/image-pocket-borealis.jpg");
+}
+
+@media only screen and (max-width: 37.5em) {
+  .item:nth-child(6) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/mobile/image-pocket-borealis.jpg");
+  }
 }
 
 .item:nth-child(7) {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/desktop/image-curiosity.jpg");
 }
 
+@media only screen and (max-width: 37.5em) {
+  .item:nth-child(7) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/mobile/image-curiosity.jpg");
+  }
+}
+
 .item:nth-child(8) {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/desktop/image-fisheye.jpg");
+}
+
+@media only screen and (max-width: 37.5em) {
+  .item:nth-child(8) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/mobile/image-fisheye.jpg");
+  }
 }
 
 .footer {
@@ -261,10 +419,23 @@ li {
   padding: 3rem 0;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .footer {
+    padding: 5rem 0;
+  }
+}
+
 .footer .logo {
   transform: scale(0.8);
   position: relative;
   left: -20px;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .footer .logo {
+    left: 0;
+    transform: scale(1);
+  }
 }
 
 .footer__top, .footer__bottom {
@@ -275,9 +446,40 @@ li {
   font-family: "Alata", sans-serif;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .footer__top {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+.footer__list {
+  display: none;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .footer__list {
+    display: grid;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  .footer__list li.nav__item {
+    margin: 0;
+  }
+}
+
 .footer__social {
   display: flex;
   align-items: center;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .footer__social {
+    margin: 1rem 0;
+  }
 }
 
 .footer__social li {
@@ -314,4 +516,11 @@ li {
 
 .footer__copyright {
   color: var(--darkGray);
+}
+
+@media only screen and (max-width: 37.5em) {
+  .footer__copyright {
+    text-align: center;
+    margin: auto;
+  }
 }
