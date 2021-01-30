@@ -1,0 +1,52 @@
+:root {
+    --darkGray: hsl(0, 0%, 55%);
+    --veryDarkgray: hsl(0, 0%, 41%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    transition: 300ms ease;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+a,
+button {
+    text-decoration: none;
+    color: inherit;
+    background-color: transparent;
+    border: none;
+    font-size: inherit;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+body {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Alata", sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
