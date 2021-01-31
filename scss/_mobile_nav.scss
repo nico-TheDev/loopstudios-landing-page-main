@@ -1,0 +1,51 @@
+.mobilenav {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 3rem;
+    background-color: black;
+    color: white;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+
+    transform-origin: top right;
+    transform: scale(0);
+    transition: transform ease-in-out 500ms;
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        a {
+            position: relative;
+            top: 10px;
+        }
+    }
+
+    &__list {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        li {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__item {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.open {
+    transform: scale(1);
+}
